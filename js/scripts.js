@@ -1,7 +1,14 @@
 $(document).ready(function() {
   $("#infoInput form").submit(function(event) {
-    var inputVar = $("select#family").val();
+    var familySelect = $("select#family").val();
+    var excitementSelect = $("select#excitement").val();
+    var ageInput = parseInt($("input#age").val());
+    var arrayInputs = [familySelect, excitementSelect, ageInput];
     debugger;
-    event.preventDefault();
+
+  //  if (familySelect === "alone" && ) {
+  //  }
+
+  //  event.preventDefault();
   });
 });
