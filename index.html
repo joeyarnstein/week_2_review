@@ -4,6 +4,10 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <title>Vacay</title>
   </head>
 
@@ -13,37 +17,55 @@
 
       <h4>Take our brief questionnaire to allow us, someone you don't know, doesn't know you, and probably has no expertise on the subject, to tell you the perfect vaction destination hand picked for you using a cold, soulless algorithm founded in nothing.</h4>
 
-        <!-- form starts here -->
+      <div class="container">
+        <h2>Find a Vacation for you!</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Take the questionnaire</button>
 
-      <div id="infoInput">
-        <form>
-          <div class="form-group">
-            <label for="family">How will you be traveling?</label>
-            <select id="family" class="form-control">
-              <option value='alone'>Alone, I'm trying to get laid.</option>
-              <option value='friend'>With a friend or partner, I'm also trying to get laid.</option>
-              <option value='kids'>With my children, I just want them to entertain themselves</option>
-            </select>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">The places you'll never go because you have kids and stuff!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Take our brief questionnaire to allow us, someone you don't know, doesn't know you, and probably has no expertise on the subject, to tell you the perfect vaction destination hand picked for you using a cold, soulless algorithm founded in nothing.</p>
+                <div id="infoInput">
+                  <form>
+                    <div class="form-group">
+                      <label for="family">How will you be traveling?</label>
+                      <select id="family" class="form-control">
+                        <option value='alone'>Alone, I'm trying to get laid.</option>
+                        <option value='friend'>With a friend or partner, I'm also trying to get laid.</option>
+                        <option value='kids'>With my children, I just want them to entertain themselves</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="excitement">Pick your ideal activity</label>
+                      <select id="excitement" class="form-control">
+                        <option value='beach'>A day at the beach reading a book, and totally ignoring the beach you spend a thousand dollars to get to.</option>
+                        <option value='party'>Up in the club with strangers who probably wouldn't like you even if you could hear each other.</option>
+                        <option value='stayhome'>Watching a movie, curled up on the couch with that special someone you pretend you still have feelings for.</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="age">Enter your age</label>
+                      <input id="age" class="form-control" placeholder="Like we care.">
+                    </div>
+
+                    <!--submit button-->
+
+                    <button class="btn btn-primary btn-lg" type="submit" >Submit and see result!</button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="excitement">Pick your ideal activity</label>
-            <select id="excitement" class="form-control">
-              <option value='beach'>A day at the beach reading a book, and totally ignoring the beach you spend a thousand dollars to get to.</option>
-              <option value='party'>Up in the club with strangers who probably wouldn't like you even if you could hear each other.</option>
-              <option value='stayhome'>Watching a movie, curled up on the couch with that special someone you pretend you still have feelings for.</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="age">Enter your age</label>
-            <input id="age" class="form-control" placeholder="Like we care.">
-          </div>
-
-          <!--submit button-->
-
-          <button class="btn btn-primary btn-lg" type="submit">Submit and see result!</button>
-        </form>
+        </div>
       </div>
 
       <div id="vegas" class="notshown">
