@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#infoInput form").submit(function(event) {
-    
+
     var familySelect = $("select#family").val();
     var excitementSelect = $("select#excitement").val();
     var ageInput = parseInt($("input#age").val());
@@ -11,17 +11,20 @@ $(document).ready(function() {
       if (excitementSelect === "beach") {
         /* beach */
         if (ageInput > 50) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         }
         else
         {
+          $(".notshown").hide();
           $("#jamaica").show();
           $("body").css('background-color','green');
         }
       } else if (excitementSelect === "party") {
         /* club hopper */
         if (ageInput > 35) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         } else {
@@ -30,7 +33,8 @@ $(document).ready(function() {
         }
       } else {
         /* home-body */
-          $("#whocares").show();
+        $(".notshown").hide();
+        $("#whocares").show();
       }
       /* end rules for kids --------------
       -start rules for Friends */
@@ -39,25 +43,30 @@ $(document).ready(function() {
       if (excitementSelect === "beach") {
         /* beach */
         if (ageInput > 50) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         }
         else
         {
+          $(".notshown").hide();
           $("#jamaica").show();
           $("body").css('background-color','green');
         }
       } else if (excitementSelect === "party") {
         /* club hopper */
         if (ageInput > 50) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         } else {
+          $(".notshown").hide();
           $("#whocares").show();
           $("body").css('background-color','#da80fb');
         }
       } else {
         /* home-body */
+        $(".notshown").hide();
         $("#jonestown").show();
         $("body").css('background-color', 'pink')
       }
@@ -67,25 +76,30 @@ $(document).ready(function() {
       if (excitementSelect === "beach") {
         /* beach */
         if (ageInput > 50) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         }
         else
         {
+          $(".notshown").hide();
           $("#jamaica").show();
           $("body").css('background-color','green');
         }
       } else if (excitementSelect === "party") {
         /* club hopper */
         if (ageInput > 35) {
+          $(".notshown").hide();
           $("#florida").show();
           $("body").css('background-color','yellow');
         } else {
+          $(".notshown").hide();
           $("#whocares").show();
           $("body").css('background-color','#da80fb');
         }
       } else {
         /* home-body */
+        $(".notshown").hide();
         $("#jonestown").show();
         $("body").css('background-color', 'pink')
       }
